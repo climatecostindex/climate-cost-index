@@ -4,7 +4,7 @@ A composite household-level metric for climate-linked cost pressure across U.S. 
 
 CCI measures the relative intensity and acceleration of climate-linked cost signals and hazard exposures experienced by households, combining climate-attributed cost components with hazard burden proxies into a standardized index. The national median is set to 100. A score of 115 indicates approximately 15 percent greater climate-linked cost pressure than the median county.
 
-**Paper:** [The Climate Cost Index: Methodology Specification, Empirical Results, and Validation Framework](docs/) (SSRN working paper, March 2026)
+**Paper:** [The Climate Cost Index: Measuring Climate-Linked Household Cost Pressure Across U.S. Counties](docs/) (SSRN working paper, March 2026)
 
 ## v1.0 Results
 
@@ -55,8 +55,6 @@ python pipeline/run_validate.py    # Run validation suite
 
 ```bash
 python pipeline/run_full.py        # End-to-end
-uvicorn api.main:app --reload      # API server
-cd dashboard && npm run dev        # Dashboard
 pytest tests/ -v                   # Tests (34 passing)
 ```
 
@@ -77,8 +75,8 @@ All free. Add to `.env`:
 ingest/       Fetch and cache raw federal data (no computation)
 transform/    Harmonize to county-year, compute derived scores, attribution
 score/        Statistical engine: percentiles, weights, penalties, acceleration
-api/          FastAPI REST API
-dashboard/    React + Tailwind + D3/Recharts
+api/          FastAPI REST API (placeholder — not yet functional)
+dashboard/    React + Tailwind + D3/Recharts (placeholder — not yet functional)
 pipeline/     Entry points for each stage
 config/       Component definitions, weights, tiers
 tests/        Pytest suite
@@ -147,8 +145,7 @@ All public federal data:
 ## Tech Stack
 
 - Python 3.11+, pandas, numpy, scipy, scikit-learn, statsmodels, geopandas
-- DuckDB (local storage), FastAPI (API)
-- React + Tailwind + D3/Recharts (dashboard)
+- DuckDB (local storage)
 
 ## License
 
@@ -157,6 +154,6 @@ TBD
 ## Citation
 
 ```
-Kilpatrick, W. (2026). The Climate Cost Index: A Household-Level Composite
-of Climate-Linked Cost Signals and Hazard Exposure Intensity. Working Paper.
+Kilpatrick, W. (2026). The Climate Cost Index: Measuring Climate-Linked
+Household Cost Pressure Across U.S. Counties. Working Paper.
 ```
