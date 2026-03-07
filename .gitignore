@@ -1,0 +1,32 @@
+# Data files (large, not committed)
+data/raw/
+data/harmonized/
+data/scored/
+data/validation/
+*.duckdb
+*.duckdb.wal
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Environment
+.env
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Dashboard
+dashboard/node_modules/
+dashboard/dist/
+dashboard/.next/
