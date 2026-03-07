@@ -149,7 +149,7 @@ All public federal data:
 
 ## License
 
-TBD
+MIT — see [LICENSE](LICENSE)
 
 ## Citation
 
