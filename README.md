@@ -45,11 +45,16 @@ cp .env.example .env   # Add your API keys (all free, see below)
 uv sync                # or: pip install -e .
 
 # Run the full pipeline
-python pipeline/run_ingest.py      # Download raw data (~6.6 GB, 2-4 hours)
+python pipeline/run_ingest.py      # Download raw data (~6.6 GB, see note below)
 python pipeline/run_transform.py   # Harmonize to county-year
 python pipeline/run_score.py       # Compute CCI scores
 python pipeline/run_validate.py    # Run validation suite
+
+Note:
+The FEMA National Flood Hazard Layer (NFHL) download alone is approximately 3 GB of geodatabase files, and FEMA servers are often slow or intermittent. The ingest pipeline may appear stalled during this step, but it is functioning normally
 ```
+
+**Ingest timing:** Most sources download in under an hour. FEMA NFHL (~3 GB of geodatabase files) can take significantly longer depending on FEMA server responsiveness. Total ingest time ranges from 2–8+ hours. Each ingester is idempotent — if interrupted, rerun and it will skip completed downloads.
 
 ### Run individual stages
 
