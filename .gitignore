@@ -1,8 +1,12 @@
-# Data files (large, not committed)
-data/raw/
-data/harmonized/
-data/scored/
-data/validation/
+# Data files (large, not committed — download via GitHub Releases or re-ingest)
+data/raw/*
+!data/raw/.gitkeep
+data/harmonized/*
+!data/harmonized/.gitkeep
+data/scored/*
+!data/scored/.gitkeep
+data/validation/*
+!data/validation/.gitkeep
 *.duckdb
 *.duckdb.wal
 
