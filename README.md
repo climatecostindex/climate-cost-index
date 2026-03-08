@@ -77,8 +77,6 @@ All free. Add to `.env`:
 ingest/       Fetch and cache raw federal data (no computation)
 transform/    Harmonize to county-year, compute derived scores, attribution
 score/        Statistical engine: percentiles, weights, penalties, acceleration
-api/          FastAPI REST API serving scored data
-dashboard/    React + Tailwind + D3/Recharts interactive dashboard
 pipeline/     Entry points for each stage
 config/       Component definitions, weights, tiers
 tests/        Pytest suite
@@ -144,45 +142,9 @@ All public federal data:
 - **BLS** — Consumer Expenditure Survey, CPI Food indices
 - **Census** — ACS (county), block-group housing units, TIGER shapefiles
 
-## Dashboard & API
-
-The interactive dashboard visualizes CCI scores on a county-level choropleth map with detailed breakdowns.
-
-### Run the dashboard
-
-```bash
-# 1. Install dashboard dependencies (once)
-cd dashboard
-npm install
-
-# 2. Start the API server (from the project root)
-cd ..
-uvicorn api.main:app --reload
-
-# 3. In a second terminal, start the dashboard dev server
-cd dashboard
-npm run dev
-```
-
-Open **http://localhost:5173** in your browser. The dashboard proxies API requests to the FastAPI server on port 8000.
-
-### API endpoints
-
-| Endpoint | Description |
-|----------|-------------|
-| `GET /v1/scores/{fips}` | Score for a single county |
-| `GET /v1/scores` | List/filter scores (by state, score range) |
-| `GET /v1/components/{fips}` | 12-component breakdown |
-| `GET /v1/compare?fips=A,B` | Side-by-side comparison (2-4 counties) |
-| `GET /v1/search?q=Miami` | County name autocomplete |
-| `GET /v1/trends/{fips}` | Trend data (single year in v1) |
-| `GET /v1/metadata` | Methodology version, k constant, components |
-
 ## Tech Stack
 
 - Python 3.11+, pandas, numpy, scipy, scikit-learn, statsmodels, geopandas
-- FastAPI + uvicorn (API)
-- React 18 + Vite + Tailwind CSS + Recharts + D3 (dashboard)
 - DuckDB (local storage)
 
 ## License
