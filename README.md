@@ -162,7 +162,7 @@ Household Cost Pressure Across U.S. Counties. Working Paper.
 
 Questions about the Climate Cost Index methodology or data can be directed to:
 
-William Kilpatrick  
-Climate Cost Index 
-Email: william@climatecostindex.com
+William Kilpatrick<br>
+Climate Cost Index<br>
+Email: william@climatecostindex.com<br>
 Website: https://climatecostindex.com
