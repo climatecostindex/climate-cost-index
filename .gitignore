@@ -34,3 +34,8 @@ venv/
 dashboard/node_modules/
 dashboard/dist/
 dashboard/.next/
+api/
+dashboard/
+
+# Testing
+tests/test_api/ 
