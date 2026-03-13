@@ -150,14 +150,14 @@ All public federal data:
 ## License
 
 MIT — see [LICENSE](LICENSE)
-
+<!--
 ## Citation
 
 ```
 Kilpatrick, W. (2026). The Climate Cost Index: Measuring Climate-Linked
 Household Cost Pressure Across U.S. Counties. Working Paper.
 ```
-
+-->
 ## Contact
 
 Questions about the Climate Cost Index methodology or data can be directed to:
