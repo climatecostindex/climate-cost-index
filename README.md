@@ -4,7 +4,7 @@ A composite household-level metric for climate-linked cost pressure across U.S. 
 
 CCI measures the relative intensity and acceleration of climate-linked cost signals and hazard exposures experienced by households, combining climate-attributed cost components with hazard burden proxies into a standardized index. The national median is set to 100. A score of 115 indicates approximately 15 percent greater climate-linked cost pressure than the median county.
 
-**Paper:** [The Climate Cost Index: Measuring Climate-Linked Household Cost Pressure Across U.S. Counties](docs/) (SSRN working paper, March 2026)
+<!-- **Paper:** [The Climate Cost Index: Measuring Climate-Linked Household Cost Pressure Across U.S. Counties](docs/) (SSRN working paper, March 2026) -->
 
 ## v1.0 Results
 
